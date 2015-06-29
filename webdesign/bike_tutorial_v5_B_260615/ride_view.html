@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="eZ Systems - Beginner tutorial" content="eZ Systems where content meets business">
+        <meta name="Bike Tutorial" content="eZ Systems tutorial">
+
+        <title>Beginners Tutorial - Bike Rides</title>
+        <!-- <link rel="icon" type="image" href="images/favicon.ico"> -->
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+        <!-- Custom CSS -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href='css/normalize.css' rel='stylesheet'>
+
+        <!-- Plugin CSS -->
+       
+
+        <!-- Custom Fonts & Themes -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Bitter:700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" id="total-navbar">
+            <div class="container">
+                <!-- Brand and toggle -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#go-bike-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img alt="Brand" src="images/128_bike_white_avenir.png">
+                    </a>
+                </div>
+
+                <!-- nav links -->
+                <div id="go-bike-navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">ALL RIDES</a></li>
+                        <li><a href="#">SUBMIT A RIDE</a></li>
+                        <li><a href="#">MY ACCOUNT</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">EN</a></li>
+                        <li><a href="#">FR</a></li>
+                        <li><a href="#">NO</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!-- /.container -->
+        </nav>
+
+        <!-- Content -->
+        <section class="below-navbar">
+            <div class="container">
+                <div class="row regular-content-size">
+                    <div class="col-md-10 col-md-offset-1 row-padding">
+                        <div class="col-md-2 text-left">
+                            <h2>Ride:</h2>
+                        </div>
+                        <div class="col-md-5 text-left">
+                            <h2>My Favorite Ride</h2>
+                        </div>
+                        <div class="col-md-5 searcher">
+                            <h4 class="center bottom pull-left searcher-text">Find a Ride:</h4>
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row regular-content-size">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div id="map-container"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="first-below-navbar">
+            <div class="container">
+                <div class="row regular-content-size">
+                    <div class="col-md-10 col-md-offset-1">
+                        <h4 class="underscore-green"> </h4>
+                    </div>
+                    <div class="col-md-10 col-md-offset-1 padding-box">
+                        <div class="col-md-2">
+                            <div class="box-ride">
+                                <h3 class="special-number">50 Km</h3>
+                                <p class="pre-small special-number special-number-margin"><strong>Level</strong></p>
+                                <p class="text-center"><i class="fa fa-star star-color"></i><i class="fa fa-star star-color"></i></p>
+                                <p class="bold blue-text special-number">1h 27 min</p>
+                            </div>
+                        </div>
+                        <div class="col-md-10 bottom-extra">
+                            <div class="col-md-2 text-right">
+                                <p class="bold">Name:</p>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="bold">Sarah Haim-Lubczanski</p>
+                            </div>
+                            <div class="col-md-1 text-right">
+                                <p class="bold">Start:</p>
+                                <p class="bold">End:</p> 
+                            </div>
+                            <div class="col-md-5">
+                                <p class="bold">Lyon, France</p>
+                                <p class="bold">St-Chamond, France</p>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="col-md-2 text-right">
+                                <p><strong>Description:</p>
+                            </div>
+                            <div class="col-md-10 text-justify">
+                                <p>I rode with my sister Mary who had never rode a distance like this. We stopped at a nice little Italian Cafe in downtown Schnectady, and after some gellato we headed back along the same route. We stopped at a ball park for a hot dog and watched some baseball, then on to the historic Nyskiunia RR Station building. We stopped again at the Lock 7 park and watched some boats passing through the lock.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+         <section class="photos">
+            <div class="container">
+                <div class="row regular-content-size">
+                    <div class="col-md-10 col-md-offset-1" id="wrapper">
+                        <div class="col-md-12">
+                            <h4 class="underscore-green">Points of interest:</h4>
+                        </div>
+                        <div class="col-md-4 photos-box">
+                            <a href="#bikeModal1" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <i class="fa fa-search-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img src="images/3.jpg" class="img-responsive img-rounded" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-4 photos-box">
+                            <a href="#bikeModal2" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <i class="fa fa-search-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img src="images/Carousel_1st.png" class="img-responsive img-rounded" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-4 photos-box">
+                           <a href="#bikeModal3" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <i class="fa fa-search-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img src="images/Carousel_2nd.png" class="img-responsive img-rounded" alt="">
+                            </a>
+                        </div>
+
+
+                        <!-- <div class="col-md-2 photos-box">
+                            <a href="#bikeModal4" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <i class="fa fa-search-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img src="images/Carousel_3rd.png" class="img-responsive img-rounded" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-2 photos-box">
+                            <a href="#bikeModal5" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <i class="fa fa-search-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img src="images/Carousel_1st.png" class="img-responsive img-rounded" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-2 photos-box">
+                            <a href="#bikeModal6" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <i class="fa fa-search-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img src="images/3.jpg" class="img-responsive img-rounded" alt="">
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+       <!--  <section class="photos">
+            <div class="container">
+                <div class="row regular-content-size">
+                    <div class="col-md-10 col-md-offset-1" id="wrapper">
+                        <div class="col-md-2 photos-box">
+                            <a href="#bikeModal1" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <i class="fa fa-search-plus fa-lg"></i>
+                                    </div>
+                                </div>
+                                <img src="images/3.jpg" class="img-responsive img-rounded" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-2 photos-box">
+                            <a href="#bikeModal2" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <i class="fa fa-search-plus fa-lg"></i>
+                                    </div>
+                                </div>
+                                <img src="images/Carousel_1st.png" class="img-responsive img-rounded" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-2 photos-box">
+                           <a href="#bikeModal3" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <i class="fa fa-search-plus fa-lg"></i>
+                                    </div>
+                                </div>
+                                <img src="images/Carousel_2nd.png" class="img-responsive img-rounded" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-2 photos-box">
+                            <a href="#bikeModal4" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <i class="fa fa-search-plus fa-lg"></i>
+                                    </div>
+                                </div>
+                                <img src="images/Carousel_3rd.png" class="img-responsive img-rounded" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-2 photos-box">
+                            <a href="#bikeModal5" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <i class="fa fa-search-plus fa-lg"></i>
+                                    </div>
+                                </div>
+                                <img src="images/Carousel_1st.png" class="img-responsive img-rounded" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-2 photos-box">
+                            <a href="#bikeModal6" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <i class="fa fa-search-plus fa-lg"></i>
+                                    </div>
+                                </div>
+                                <img src="images/3.jpg" class="img-responsive img-rounded" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="buttons">
+            <div class="container">
+                <div class="row regular-content-size">
+                    <div class="col-md-5 button-padding">
+                        <a href="#" class="button pull-right"><i class="fa fa-print fa-lg"></i> PRINT RIDE</a>
+                    </div>
+                    <div class="col-md-5 col-md-offset-2 button-padding">
+                        <a href="#" class="button pull-left"><i class="fa fa-download fa-lg"></i> DOWNLOAD</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="buttons">
+            <div class="container">
+                <div class="row regular-content-size">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h4 class="underscore-green">Comments:</h4>
+                    </div>
+    
+
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="well">
+                            <h4>Leave a comment</h4>
+                            <form role="form" class="clearfix">
+                                <div class="col-md-6 form-group">
+                                    <label class="sr-only" for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Name">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="sr-only" for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <label class="sr-only" for="email">Comment</label>
+                                    <textarea class="form-control" id="comment" placeholder="Comment"></textarea>
+                                </div>
+                                <div class="col-md-12 form-group text-right">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="text-center">
+            <div class="footer-color-one">
+                <div class="container">
+                    <div class="col-xs-10 col-xs-offset-1 text-center" id="intouch">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="footer-color-two">
+                <div class="container">
+                    <div class="row regular-content-size">
+                        <div class="col-md-8 col-md-offset-2 footer-links-block">
+                            <ul class="list-inline footer-links">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="index.html">All Rides</a></li>
+                                <li><a href="#">Submit a Ride</a></li>
+                                <li><a href="#">FAQ</a></li> 
+                            </ul>
+                        </div>
+                        <div class="col-md-8 col-md-offset-2 footer-links-block">
+                            <ul class="list-inline footer-links">
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">Language</a></li>
+                                <li><a href="#">Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-color-three">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="small">Website design &#38; content © copyright 2015 eZ Systems. This website was made with eZ Platform</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- Portfolio Modals -->
+        <div class="bike-modal modal fade" id="bikeModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="modal-body text-center">
+                                <h2>Photo: Point of Interest 1</h2>
+                                <hr class="featurette-divider">
+                                <img src="images/3.jpg" class="img-responsive img-centered img-rounded" alt="">
+                                <p class="padding-box text-justify">It was a very nice ride actually. There were two downhill tracks where I could make use of my new bike. It was really awesome. You guys should try this road trail.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bike-modal modal fade" id="bikeModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="modal-body">
+                                <h2>Photo: Point of Interest 2</h2>
+                                <hr class="featurette-divider">
+                                <img src="images/Carousel_1st.png" class="img-responsive img-centered img-rounded" alt="">
+                                <p class="padding-box text-justify">It was a very nice ride actually. There were two downhill tracks where I could make use of my new bike. It was really awesome. You guys should try this road trail.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bike-modal modal fade" id="bikeModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="modal-body">
+                                <h2>Photo: Point of Interest 3</h2>
+                                <hr class="featurette-divider">
+                                <img src="images/Carousel_2nd.png" class="img-responsive img-centered img-rounded" alt="">
+                                <p class="padding-box text-justify">It was a very nice ride actually. There were two downhill tracks where I could make use of my new bike. It was really awesome. You guys should try this road trail.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bike-modal modal fade" id="bikeModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="modal-body">
+                                <h2>Photo: Point of Interest 4</h2>
+                                <hr class="featurette-divider">
+                                <img src="images/Carousel_3rd.png" class="img-responsive img-centered img-rounded" alt="">
+                                <p class="padding-box text-justify">It was a very nice ride actually. There were two downhill tracks where I could make use of my new bike. It was really awesome. You guys should try this road trail.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bike-modal modal fade" id="bikeModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="modal-body">
+                                <h2>Photo: Point of Interest 5</h2>
+                                <hr class="featurette-divider">
+                                <img src="images/Carousel_1st.png" class="img-responsive img-centered img-rounded" alt="">
+                                <p class="padding-box text-justify">It was a very nice ride actually. There were two downhill tracks where I could make use of my new bike. It was really awesome. You guys should try this road trail.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bike-modal modal fade" id="bikeModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="modal-body">
+                                <h2>Photo: Point of Interest 6</h2>
+                                <hr class="featurette-divider">
+                                <img src="images/3.jpg" class="img-responsive img-centered img-rounded" alt="">
+                                <p class="padding-box text-justify">It was a very nice ride actually. There were two downhill tracks where I could make use of my new bike. It was really awesome. You guys should try this road trail.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+         <!-- jQuery -->
+        <script src="js/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+
+
+        <!-- My Custom JavaScript -->
+        <script src="js/bike.js"></script>
+        
+        <!-- Google Maps scripts -->
+        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script>
+            function init_map() {
+                var var_location = new google.maps.LatLng(45.763438, 4.835658);
+         
+                var var_mapoptions = {
+                  center: var_location,
+                  zoom: 14
+                };
+         
+                var var_marker = new google.maps.Marker({
+                    position: var_location,
+                    map: var_map,
+                    title:"Venice"});
+         
+                var var_map = new google.maps.Map(document.getElementById("map-container"),
+                    var_mapoptions);
+         
+                var_marker.setMap(var_map); 
+         
+            }
+         
+            google.maps.event.addDomListener(window, 'load', init_map);
+        </script>
+    </body>
+</html>
