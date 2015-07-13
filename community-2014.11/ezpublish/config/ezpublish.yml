@@ -1,0 +1,84 @@
+doctrine:
+    dbal:
+        connections:
+            eng_repository_connection:
+                driver: pdo_mysql
+                host: localhost
+                user: root
+                password: s3cr3t
+                dbname: beginner_tutorial
+                charset: UTF8
+ezpublish:
+    imagemagick:
+        enabled: true
+        path: /usr/bin/convert
+    repositories:
+        eng_repository:
+            engine: legacy
+            connection: eng_repository_connection
+    siteaccess:
+        default_siteaccess: eztutorial_site_clean
+        list:
+            - eztutorial_site_clean
+            - eng
+            - fre
+            - rus
+            - eztutorial_site_clean_admin
+        groups:
+            ezdemo_site_clean_group:
+                - eztutorial_site_clean
+                - eng
+                - fre
+                - rus
+                - eztutorial_site_clean_admin
+                - gobike_site
+                - gobike_site_admin
+        match:
+            URIElement: '1'
+    system:
+        ezdemo_site_clean_group:
+            repository: eng_repository
+            var_dir: var/ezdemo_site
+        eng:
+            languages:
+                - eng-GB
+            session:
+                name: eZSESSID
+        eztutorial_site_clean_admin:
+            legacy_mode: true
+            languages:
+                - eng-GB
+                - fre-FR
+                - rus-RU
+        eztutorial_site_clean:
+            languages:
+                - eng-GB
+                - fre-FR
+                - rus-RU
+            session:
+                name: eZSESSID
+            content:
+                view_cache: true
+                ttl_cache: true
+                # TTL cache (http) in seconds
+                # Note that Http cache for a given content is always invalidated when publishing that content
+                default_ttl: 300
+        fre:
+            languages:
+                - fre-FR
+                - eng-GB
+            session:
+                name: eZSESSID
+        rus:
+            languages:
+                - rus-RU
+                - eng-GB
+            session:
+                name: eZSESSID
+stash:
+    caches:
+        default:
+            drivers:
+                - FileSystem
+            inMemory: true
+            registerDoctrineAdapter: false
