@@ -1,0 +1,3 @@
+ez_tutorial_bike_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: EzTutorialBikeBundle:Default:index }
