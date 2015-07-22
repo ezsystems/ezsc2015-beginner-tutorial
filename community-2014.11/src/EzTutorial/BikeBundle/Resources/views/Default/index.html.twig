@@ -72,11 +72,16 @@
     <div class="container">
         <div class="row regular-content-size">
             <div class="col-md-8 col-md-offset-2 box-style">
-                <h3 class="center bottom-plus new-header">List of all Rides</h3>
+                <h3 class="center bottom-plus new-header">List of all
+                    Rides</h3>
+
                 <table class="table table-hover">
                     <thead>
                     <tr class="table-header">
-                        <th></th>
+                        <th>{% image '@EzTutorialBikeBundle/Resources/images/3.jpg' %}
+                                        <img src="{{ asset_url }}" alt="3" class="img-rounded"
+                                             style="width: 20%;"/>
+                                        {% endimage %}</th>
                         <th>Name</th>
                         <th>Starting Point</th>
                         <th>Length</th>
@@ -84,57 +89,19 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>
-                            {% image '@EzTutorialBikeBundle/Resources/images/3.jpg' %}
-                            <img src="{{ asset_url }}" alt="3" class="img-rounded"
-                                 style="width: 20%;"/>
-                            {% endimage %}
-                            {#<img src="{{ asset('@EzTutorialBikeBundle/Resources/images/3.jpg') }}" class="img-rounded"#}
-                            {#style="width: 20%;">#}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong><a href="ride_view.html" target="_self">My first ride</a></strong>
-                        </td>
-                        <td>Lyon</td>
-                        <td>20 Km</td>
-                        <td><i class="fa fa-star star-color"></i></td>
-                    </tr>
-                    <tr>
-                        <td><strong><a href="ride_view.html" target="_self">My favorite ride</a></strong></td>
-                        <td>Lyon</td>
-                        <td>50 Km</td>
-                        <td><i class="fa fa-star star-color"></i><i class="fa fa-star star-color"></i></td>
-                    </tr>
-                    <tr>
-                        <td><strong><a href="ride_view.html" target="_self">Afternoon ride</a></strong></td>
-                        <td>Lyon</td>
-                        <td>80 Km</td>
-                        <td><i class="fa fa-star star-color"></i><i class="fa fa-star star-color"></i><i
-                                    class="fa fa-star star-color"></i></td>
-                    </tr>
-                    <tr>
-                        <td><strong><a href="ride_view.html" target="_self">Col du Chamois</a></strong></td>
-                        <td>Lyon</td>
-                        <td>60 Km</td>
-                        <td><i class="fa fa-star star-color"></i><i class="fa fa-star star-color"></i><i
-                                    class="fa fa-star star-color"></i></td>
-                    </tr>
+                    {% for ride in rideList %}
+                        <tr>
+                            <td colspan="2">
+                                <strong><a href="{{ ride.id }}/ride_view.html"
+                                           target="_self">{{ ride.title }} </a></strong>
+                            </td>
+                            <td>{{ ride.starting_point }}</td>
+                            <td>{{ ride.length }} Km</td>
+                            <td>{{ ride.difficulty }}<i class="fa fa-star star-color"></i></td>
+                        </tr>
+                    {% endfor %}
                     </tbody>
                 </table>
-                <nav class="text-center">
-                    <ul class="pagination">
-                        <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </div>
