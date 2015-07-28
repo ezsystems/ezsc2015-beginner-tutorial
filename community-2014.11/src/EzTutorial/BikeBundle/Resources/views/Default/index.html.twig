@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="eZ Systems - Beginner tutorial" content="eZ Systems where content meets business">
+    <meta name="Bike Tutorial" content="eZ Systems tutorial">
+
+    <title>Beginners Tutorial - Bike Rides</title>
+
+    <!-- Bootstrap Core CSS -->
+    {% stylesheets  filter='cssrewrite'
+    '@EzTutorialBikeBundle/Resources/css/bootstrap.min.css'
+    '@EzTutorialBikeBundle/Resources/css/bootstrap-theme.css'
+    '@EzTutorialBikeBundle/Resources/css/style.css'
+    '@EzTutorialBikeBundle/Resources/css/normalize.css' %}
+    <link rel="stylesheet" type="text/css" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+
+</head>
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" id="total-navbar">
+    <div class="container">
+        <!-- Brand and toggle -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#go-bike-navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                {% image '@EzTutorialBikeBundle/Resources/images/128_bike_white_avenir.png' %}
+                <img src="{{ asset_url }}" alt="Logo"/>
+                {% endimage %}
+            </a>
+        </div>
+
+        <!-- nav links -->
+        <div id="go-bike-navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#">ALL RIDES</a></li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Header -->
+<header class="below-navbar">
+    <div class="container">
+        <div class="row" id="banner">
+            <div class="col-md-12">
+                <div class="banner-header-block">
+                    {% image '@EzTutorialBikeBundle/Resources/images/logo_just_letters.png' %}
+                    <img src="{{ asset_url }}" alt="Logo just letters" style="width: 100%;"/>
+                    {% endimage %}
+                    <h3 class="banner-header">Discover new rides! Go Bike!</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="buttons">
+    <div class="container">
+        <div class="row regular-content-size">
+            <div class="col-md-8 col-md-offset-2 box-style">
+                <h3 class="center bottom-plus new-header">List of all
+                    Rides</h3>
+
+                <table class="table table-hover">
+                    <thead>
+                    <tr class="table-header">
+                        <th>{% image '@EzTutorialBikeBundle/Resources/images/3.jpg' %}
+                                        <img src="{{ asset_url }}" alt="3" class="img-rounded"
+                                             style="width: 20%;"/>
+                                        {% endimage %}</th>
+                        <th>Name</th>
+                        <th>Starting Point</th>
+                        <th>Length</th>
+                        <th>Level</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for ride in rideList %}
+                        <tr>
+                            <td colspan="2">
+                                <strong><a href="{{ ride.id }}/ride_view.html"
+                                           target="_self">{{ ride.title }} </a></strong>
+                            </td>
+                            <td>{{ ride.starting_point }}</td>
+                            <td>{{ ride.length }} Km</td>
+                            <td>{{ ride.difficulty }}<i class="fa fa-star star-color"></i></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+    <div class="footer-color-one">
+        <div class="container">
+            <div class="col-xs-10 col-xs-offset-1 text-center" id="intouch">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-color-two">
+        <div class="container">
+            <div class="row regular-content-size">
+                <div class="col-md-8 col-md-offset-2 footer-links-block">
+                    <ul class="list-inline footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="map.html">All Rides</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-8 col-md-offset-2 footer-links-block">
+                    <ul class="list-inline footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Language</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-color-three">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="small">Website design &#38; content © copyright 2015 eZ Systems. This website was made
+                        with eZ Platform</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
