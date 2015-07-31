@@ -1,0 +1,2 @@
+imports:
+    - { resource: @EzTutorialBikeBundle/Resources/config/template_rules.yml }

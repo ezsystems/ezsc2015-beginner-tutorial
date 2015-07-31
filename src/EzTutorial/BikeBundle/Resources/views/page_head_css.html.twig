@@ -1,0 +1,13 @@
+<!-- Bootstrap Core CSS -->
+{% stylesheets  filter='cssrewrite'
+'@EzTutorialBikeBundle/Resources/css/bootstrap.min.css'
+'@EzTutorialBikeBundle/Resources/css/bootstrap-theme.css'
+'@EzTutorialBikeBundle/Resources/css/style.css'
+'@EzTutorialBikeBundle/Resources/css/normalize.css' %}
+<link rel="stylesheet" type="text/css" href="{{ asset_url }}"/>
+{% endstylesheets %}
+
+
+<style type="text/css">
+    @import url("{{ asset('extension/ezwt/design/standard/stylesheets/websitetoolbar.css') }}");
+</style>

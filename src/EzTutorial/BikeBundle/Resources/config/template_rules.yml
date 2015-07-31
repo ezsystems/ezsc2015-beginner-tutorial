@@ -1,0 +1,18 @@
+ezpublish:
+    system:
+        default:
+            location_view:
+                line:
+                    ride_line:
+                        template: "EzTutorialBikeBundle:line:ride.html.twig"
+                        match:
+                            Identifier\ContentType: [ride, ride2] #I had to recreate the Contenttype so I am using ride2
+                    poi:
+                        template: "EzTutorialBikeBundle:line:poi.html.twig"
+                        match:
+                            Identifier\ContentType: [poi]
+                full:
+                    ride:
+                        template: "EzTutorialBikeBundle:full:ride.html.twig"
+                        match:
+                            Identifier\ContentType: [ride, ride2]

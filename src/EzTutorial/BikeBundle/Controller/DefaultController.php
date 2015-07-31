@@ -2,7 +2,6 @@
 
 namespace EzTutorial\BikeBundle\Controller;
 
-use Doctrine\Common\Collections\Criteria;
 use eZ\Bundle\EzPublishCoreBundle\Controller;
 use eZ\Publish\API\Repository\Values\Content\LocationQuery;
 use eZ\Publish\API\Repository\Values\ValueObject;
@@ -15,42 +14,34 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class DefaultController extends Controller
 {
-    public function indexAction($name)
-    {
-        $rideList = $this->findRidesAction(65);
-        return $this->render('EzTutorialBikeBundle:Default:index.html.twig', array('name' => $name, 'rideList' => $rideList));
-    }
-
     /**
      * @return Response
      */
-    public function listRidesAction()
+    public function indexAction()
     {
-        $response = new Response();
-        $rides = null;
+        $folderId = 124;
+        $rideList = $this->findRidesAction($folderId);
+        return $this->render('EzTutorialBikeBundle:Default:index.html.twig', array('rideList' => $rideList));
+    }
 
 
-        // Using the criteria helper (a demobundle custom service) to generate our query's criteria.
-        // This is a good practice in order to have less code in your controller.
-        $criteria = new Criteria();
-
-        // Generating query
-        $query = new Query();
-        $query->criterion = $criteria;
-        $query->sortClauses = array(
-            new SortClause\Field('ride', 'creation_date', Query::SORT_DESC)
+    /**
+     * Renders article with extra parameters that controls page elements visibility such as image and summary
+     *
+     * @param $locationId
+     * @param $viewType
+     * @param bool $layout
+     * @param array $params
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function showRideAction($locationId, $viewType, $layout = false, array $params = array())
+    {
+        return $this->get('ez_content')->viewLocation(
+            $locationId,
+            $viewType,
+            $layout,
+            array() + $params
         );
-
-        $rides = $this->searchService->findContent($query);
-
-        return $this->render(
-            'EzTutorialBikeBundle:frontpage.html.twig',
-            array(
-                'content' => $rides,
-            ),
-            $response
-        );
-
     }
 
     /**
@@ -78,7 +69,7 @@ class DefaultController extends Controller
         $criteria = array();
         $criteria[] = new Criterion\Visibility(Criterion\Visibility::VISIBLE);
         $criteria[] = new Criterion\Subtree($location->pathString);
-        $criteria[] = new Criterion\ContentTypeIdentifier(array('ride'));
+        $criteria[] = new Criterion\ContentTypeIdentifier(array('ride2'));
         $criteria[] = new Criterion\LanguageCode($languages);
 
         // Generating query to retrieve only Rides
@@ -86,7 +77,7 @@ class DefaultController extends Controller
         $query->criterion = new Criterion\LogicalAnd(
             array(
                 new Criterion\ParentLocationId($folderId),
-                new Criterion\ContentTypeIdentifier(array('ride'))
+                new Criterion\ContentTypeIdentifier(array('ride','ride2'))
             )
         );
         $searchService = $repository->getSearchService();

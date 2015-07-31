@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="eZ Systems - Beginner tutorial" content="eZ Systems where content meets business">
+    <meta name="Bike Tutorial" content="eZ Systems tutorial">
+
+    <title>Beginners Tutorial - Bike Rides</title>
+    {{ include('EzTutorialBikeBundle::page_head_css.html.twig') }}
+
+    <!-- Custom Fonts & Themes -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+{{ include('EzTutorialBikeBundle::navigation.html.twig') }}
+
+<!-- Content -->
+<section class="below-navbar">
+    <div class="container">
+        <div class="row regular-content-size">
+            <div class="col-md-10 col-md-offset-1 row-padding">
+                <div class="col-md-2 text-left">
+                    <h2>Ride:</h2>
+                </div>
+                <div class="col-md-8 text-left">
+                    <h2>{{ ez_content_name( content ) }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row regular-content-size">
+            <div class="col-md-10 col-md-offset-1">
+                <div id="map-container">
+                    {{ ez_render_field(
+                        content, 'starting_point', {  'parameters':{ 'showInfo':false, 'width': '100%', 'height' : '400px', 'zoom' : 16 } }
+                        )
+                    }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="first-below-navbar">
+    <div class="container">
+        <div class="row regular-content-size">
+            <div class="col-md-10 col-md-offset-1">
+                <h4 class="underscore-green"></h4>
+            </div>
+            <div class="col-md-10 col-md-offset-1 padding-box">
+                <div class="col-md-2">
+                    <div class="box-ride">
+                        <h3 class="special-number">{{ ez_field_value( content, "length" ) }} Km</h3>
+
+                        <p class="pre-small special-number special-number-margin"><strong>Level</strong></p>
+
+                        <p class="text-center"><i class="fa fa-star star-color"></i><i
+                                    class="fa fa-star star-color"></i></p>
+
+                        <p class="bold blue-text special-number">1h 27 min</p>
+                    </div>
+                </div>
+                <div class="col-md-10 bottom-extra">
+                    <div class="col-md-2 text-right">
+                        <p class="bold">Name:</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="bold">{{ ez_field_value( content, "author" ) }}</p>
+                    </div>
+                    <div class="col-md-1 text-right">
+                        <p class="bold">Start:</p>
+
+                        <p class="bold">End:</p>
+                    </div>
+                    <div class="col-md-5">
+                        <p class="bold">{{ ez_field_value( content, "starting_point" ) }}</p>
+
+                        <p class="bold">{{ ez_field_value( content, "ending_point" ) }}</p>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="col-md-2 text-right">
+                        <p><strong>Description:</strong></p>
+                    </div>
+                    <div class="col-md-10 text-justify">
+                        <p>{{ ez_field_value( content, "name" ) }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="buttons">
+    <div class="container">
+        <div class="row regular-content-size">
+            <div class="col-md-5 button-padding">
+                <a href="#" class="button pull-right"><i class="fa fa-print fa-lg"></i> PRINT RIDE</a>
+            </div>
+            <div class="col-md-5 col-md-offset-2 button-padding">
+                <a href="{{ ez_field_value( content, "trace_file" ) }}" class="button pull-left"><i class="fa fa-download fa-lg"></i> DOWNLOAD</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{ include('EzTutorialBikeBundle::footer.html.twig') }}
+
+
+<!-- Portfolio Modals -->
+<div class="bike-modal modal fade" id="bikeModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="modal-body text-center">
+                        <h2>Photo: Point of Interest 1</h2>
+                        <hr class="featurette-divider">
+                        <img src="images/3.jpg" class="img-responsive img-centered img-rounded" alt="">
+
+                        <p class="padding-box text-justify">It was a very nice ride actually. There were two downhill
+                            tracks where I could make use of my new bike. It was really awesome. You guys should try
+                            this road trail.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bike-modal modal fade" id="bikeModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="modal-body">
+                        <h2>Photo: Point of Interest 2</h2>
+                        <hr class="featurette-divider">
+                        <img src="images/Carousel_1st.png" class="img-responsive img-centered img-rounded" alt="">
+
+                        <p class="padding-box text-justify">It was a very nice ride actually. There were two downhill
+                            tracks where I could make use of my new bike. It was really awesome. You guys should try
+                            this road trail.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bike-modal modal fade" id="bikeModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="modal-body">
+                        <h2>Photo: Point of Interest 3</h2>
+                        <hr class="featurette-divider">
+                        <img src="images/Carousel_2nd.png" class="img-responsive img-centered img-rounded" alt="">
+
+                        <p class="padding-box text-justify">It was a very nice ride actually. There were two downhill
+                            tracks where I could make use of my new bike. It was really awesome. You guys should try
+                            this road trail.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bike-modal modal fade" id="bikeModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="modal-body">
+                        <h2>Photo: Point of Interest 4</h2>
+                        <hr class="featurette-divider">
+                        <img src="images/Carousel_3rd.png" class="img-responsive img-centered img-rounded" alt="">
+
+                        <p class="padding-box text-justify">It was a very nice ride actually. There were two downhill
+                            tracks where I could make use of my new bike. It was really awesome. You guys should try
+                            this road trail.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bike-modal modal fade" id="bikeModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="modal-body">
+                        <h2>Photo: Point of Interest 5</h2>
+                        <hr class="featurette-divider">
+                        <img src="images/Carousel_1st.png" class="img-responsive img-centered img-rounded" alt="">
+
+                        <p class="padding-box text-justify">It was a very nice ride actually. There were two downhill
+                            tracks where I could make use of my new bike. It was really awesome. You guys should try
+                            this road trail.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bike-modal modal fade" id="bikeModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="modal-body">
+                        <h2>Photo: Point of Interest 6</h2>
+                        <hr class="featurette-divider">
+                        <img src="images/3.jpg" class="img-responsive img-centered img-rounded" alt="">
+
+                        <p class="padding-box text-justify">It was a very nice ride actually. There were two downhill
+                            tracks where I could make use of my new bike. It was really awesome. You guys should try
+                            this road trail.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ include('EzTutorialBikeBundle::page_javascript.html.twig') }}
+</body>
+</html>
