@@ -1,3 +1,7 @@
 ez_tutorial_bike_homepage:
-    path:     /hello/{name}
+    path:     /hello
     defaults: { _controller: EzTutorialBikeBundle:Default:index }
+
+ez_tutorial_bike_ride_full:
+    path:     /ride/:id
+    defaults: { _controller: EzTutorialBikeBundle:Default:ride }
