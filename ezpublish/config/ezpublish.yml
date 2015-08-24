@@ -62,3 +62,10 @@ ezpublish:
                         template: "EzSummerBikeBundle:full:ride.html.twig"
                         match:
                             Identifier\ContentType: ride
+
+ez_comments:
+    system:
+        site_group:
+            default_provider: disqus
+            disqus:
+                shortname: ezpublishplatformdemo
