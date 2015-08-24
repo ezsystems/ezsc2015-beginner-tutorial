@@ -4,6 +4,9 @@
 /.idea/
 /bin/behat
 /bin/phpunit
+/bin/doctrine-dbal
+/bin/security-checker
+/bin/webunit
 /ezpublish/cache/
 /ezpublish/logs/
 /ezpublish_legacy
@@ -12,6 +15,10 @@
 /ezpublish/config/ezpublish_dev.yml
 /ezpublish/sessions
 /ezpublish/bootstrap.php.cache
+ezpublish/SymfonyRequirements.php
+ezpublish/check.php
+web/css
+web/js
 /web/index_treemenu.php
 /web/index_rest.php
 /web/index_cluster.php
