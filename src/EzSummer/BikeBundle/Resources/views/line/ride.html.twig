@@ -1,0 +1,27 @@
+<tr>
+    <td>
+        <img src="{{ asset( "bundles/ezsummerbike/images/toulousse.png" ) }}" style="width: 100%;">
+    </td>
+    <td>
+        <h3 class="header-link-table"><strong><a href="{{ path(location) }}" target="_self">{{ ez_content_name(content) }}</a></strong></h3>
+        <p class="pre-small">
+            {% for rider in ez_field_value(content, "rider").authors %}
+                {{ rider.name }}
+                {% if not loop.last %}<br>{% endif %}
+            {% endfor %}
+        </p>
+    </td>
+    <td>
+        <p>{{ ez_field_value(content, "starting_point").address }}</p>
+        <p>{{ ez_field_value(content, "end_point") }}.address</p>
+    </td>
+    <td>
+        <p>{{ ez_field_value(content, "distance").value }} Km</p>
+    </td>
+    <td>
+        <p>
+            {% set difficulty = ez_field_value(content, "difficulty").selection|first %}
+            {% for i in 0..difficulty %}<i class="fa fa-star star-color"></i>{% endfor %}
+        </p>
+    </td>
+</tr>

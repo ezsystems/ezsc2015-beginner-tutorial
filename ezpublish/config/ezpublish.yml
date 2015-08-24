@@ -64,6 +64,12 @@ ezpublish:
                         match:
                             Identifier\ContentType: ride
 
+                line:
+                    ride:
+                        template: "EzSummerBikeBundle:line:ride.html.twig"
+                        match:
+                            Identifier\ContentType: ride
+
 ez_comments:
     system:
         site_group:
