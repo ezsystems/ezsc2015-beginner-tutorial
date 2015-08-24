@@ -1,0 +1,4 @@
+services:
+#    ez_summer_bike.example:
+#        class: EzSummer\BikeBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

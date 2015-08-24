@@ -1,0 +1,3 @@
+ez_summer_bike_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: EzSummerBikeBundle:Default:index }

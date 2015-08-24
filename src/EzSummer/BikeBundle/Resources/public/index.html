@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="eZ Systems - Beginner tutorial" content="eZ Systems where content meets business">
+        <meta name="Bike Tutorial" content="eZ Systems tutorial">
+
+        <title>Beginners Tutorial - Bike Rides new</title>
+        <!-- <link rel="icon" type="image" href="images/favicon.ico"> -->
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+        <!-- Custom CSS -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href='css/normalize.css' rel='stylesheet'>
+
+        <!-- Custom Fonts & Themes -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" id="total-navbar">
+            <div class="container">
+                <!-- Brand and toggle -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#go-bike-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img alt="Brand" src="images/128_bike_white_avenir.png">
+                    </a>
+                </div>
+
+                <!-- nav links -->
+                <div id="go-bike-navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">ALL RIDES</a></li>
+                       <!--  <li><a href="#">SUBMIT A RIDE</a></li>
+                        <li><a href="#">MY ACCOUNT</a></li> -->
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">EN</a></li>
+                        <li><a href="#">FR</a></li>
+                        <li><a href="#">NO</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!-- /.container -->
+        </nav>
+
+        <!-- Header -->
+        <header class="below-navbar">
+            <div class="container">
+                <div class="row" id="banner">
+                    <div class="col-xs-12">
+                        <div class="banner-header-block">
+                            <img src="images/logo_just_letters.png" style="width: 100%;">
+                            <h3 class="banner-header">Discover new rides! Go Bike!</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="buttons">
+            <div class="container">
+                <div class="row regular-content-size">
+                    <div class="col-xs-6 col-xs-offset-3">
+                        <h4 class="center bottom">Find a Ride:</h4>
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="buttons">
+            <div class="container">
+                <div class="row regular-content-size">
+                    <div class="col-xs-10 col-xs-offset-1 box-style">
+                        <h3 class="center bottom-plus new-header">List of all Rides</h3>
+                         <table class="table table-hover">
+                            <thead>
+                                <tr class="table-header">
+                                    <th>Ride</th>
+                                    <th></th>
+                                    <th>From - To</th>
+                                    <th>Distance</th>
+                                    <th>Level</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="images/toulousse.png" style="width: 100%;">
+                                    </td>
+                                    <td>
+                                        <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">My first ride</a></strong></h3>
+                                        <p class="pre-small">Inaki Juaniz-Velilla</p>
+                                    </td>
+                                    <td>
+                                        <p>Lyon</p>
+                                        <p>Toulousse</p>
+                                    </td>
+                                    <td>
+                                        <p>30 Km</p>
+                                    </td>
+                                    <td>
+                                        <p>Super easy!</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/geneva.png" style="width: 100%;">
+                                    </td>
+                                    <td>
+                                        <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Geneva, My Favorite Ride</a></strong></h3>
+                                        <p class="pre-small">Sarah Haim-Lubczanski</p>
+                                    </td>
+                                    <td>
+                                        <p>Lyon</p>
+                                        <p>Geneva</p>
+                                    </td>
+                                    <td>
+                                        <p>100 Km</p>
+                                    </td>
+                                    <td>
+                                        <p>Amateur</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/hauteville.png" style="width: 100%;">
+                                    </td>
+                                    <td>
+                                        <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Evian</a></strong></h3>
+                                        <p class="pre-small">Sarah Haim-Lubczanski</p>
+                                    </td>
+                                    <td>
+                                        <p>Lyon</p>
+                                        <p>Evian</p>
+                                    </td>
+                                    <td>
+                                        <p>150 Km</p>
+                                    </td>
+                                    <td>
+                                        <p>Pro</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/lyon.png" style="width: 100%;">
+                                    </td>
+                                    <td>
+                                        <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Chamonix, Beautiful Ride!</a></strong></h3>
+                                        <p class="pre-small">Sarah Haim-Lubczanski</p>
+                                    </td>
+                                    <td>
+                                        <p>Lyon</p>
+                                        <p>Chamonix</p>
+                                    </td>
+                                    <td>
+                                        <p>223 Km</p>
+                                    </td>
+                                    <td>
+                                        <p>Pro</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/3.jpg" style="width: 100%;">
+                                    </td>
+                                    <td>
+                                        <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Chambery ride</a></strong></h3>
+                                        <p class="pre-small">Jince Kuruvilla</p>
+                                    </td>
+                                    <td>
+                                        <p>Lyon</p>
+                                        <p>Chambery</p>
+                                    </td>
+                                    <td>
+                                        <p>109 Km</p>
+                                    </td>
+                                    <td>
+                                        <p>Amateur</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/hauteville.png" style="width: 100%;">
+                                    </td>
+                                    <td>
+                                        <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Clemont-Ferrand; hard, but nice ;)</a></strong></h3>
+                                        <p class="pre-small">Roland Benedetti</p>
+                                    </td>
+                                    <td>
+                                        <p>Lyon</p>
+                                        <p>Clemont-Ferrand</p>
+                                    </td>
+                                    <td>
+                                        <p>165 Km</p>
+                                    </td>
+                                    <td>
+                                        <p>Pro</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/3.jpg" style="width: 100%;">
+                                    </td>
+                                    <td>
+                                        <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Saint-Paul-de-Varax, Not Bad!</a></strong></h3>
+                                        <p class="pre-small">Sarah Haim-Lubczanski</p>
+                                    </td>
+                                    <td>
+                                        <p>Lyon</p>
+                                        <p>Saint-Paul-de-Varax</p>
+                                    </td>
+                                    <td>
+                                        <p>52 Km</p>
+                                    </td>
+                                    <td>
+                                        <p>No training needed!</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/montalieu.png" style="width: 100%;">
+                                    </td>
+                                    <td>
+                                        <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Montbrison ride</a></strong></h3>
+                                        <p class="pre-small">Jince Kuruvilla</p>
+                                    </td>
+                                    <td>
+                                        <p>Lyon</p>
+                                        <p>Montbrison</p>
+                                    </td>
+                                    <td>
+                                        <p>102 Km</p>
+                                    </td>
+                                    <td>
+                                        <p>Amateur</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                     <td>
+                                        <img src="images/toulousse.png" style="width: 100%;">
+                                    </td>
+                                    <td>
+                                        <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Valence; like it, but too much traffic</a></strong></h3>
+                                        <p class="pre-small">Roland Benedetti</p>
+                                    </td>
+                                    <td>
+                                        <p>Lyon</p>
+                                        <p>Valence</p>
+                                    </td>
+                                    <td>
+                                        <p>103 Km</p>
+                                    </td>
+                                    <td>
+                                        <p>Amateur</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                     <td>
+                                        <img src="images/geneva.png" style="width: 100%;">
+                                    </td>
+                                    <td>
+                                        <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Vienne, short and nice</a></strong></h3>
+                                        <p class="pre-small">Roger Erra</p>
+                                    </td>
+                                    <td>
+                                        <p>Lyon</p>
+                                        <p>Vienne</p>
+                                    </td>
+                                    <td>
+                                        <p>40 Km</p>
+                                    </td>
+                                    <td>
+                                        <p>No training needed!</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                
+                        <nav class="text-center">
+                            <ul class="pagination">
+                                <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center">
+            <div class="footer-color-one">
+                <div class="container">
+                    <div class="col-xs-10 col-xs-offset-1 text-center" id="intouch">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="footer-color-two">
+                <div class="container">
+                    <div class="row regular-content-size">
+                        <div class="col-xs-8 col-xs-offset-2 footer-links-block">
+                            <ul class="list-inline footer-links">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="map.html">All Rides</a></li>
+                                <li><a href="find.html">Submit a Ride</a></li>
+                                <li><a href="#">FAQ</a></li> 
+                            </ul>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-2 footer-links-block">
+                            <ul class="list-inline footer-links">
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">Language</a></li>
+                                <li><a href="#">Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-color-three">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p class="small">Website design &#38; content © copyright 2015 eZ Systems. This website was made with eZ Platform</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+         <!-- jQuery -->
+        <script src="js/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        
+    </body>
+</html>

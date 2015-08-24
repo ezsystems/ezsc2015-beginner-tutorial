@@ -49,6 +49,7 @@ class EzPublishKernel extends Kernel
             new EzSystems\PlatformInstallerBundle\EzSystemsPlatformInstallerBundle(),
             new EzSystems\PrivacyCookieBundle\EzSystemsPrivacyCookieBundle(),
             new EzSystems\RepositoryFormsBundle\EzSystemsRepositoryFormsBundle(),
+            new EzSummer\BikeBundle\EzSummerBikeBundle(),
         );
 
         switch ( $this->getEnvironment() )

@@ -1,0 +1,543 @@
+p, span {
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 16px;
+}
+
+h2 {
+  font-family: 'Roboto Slab';
+  font-weight: bold;
+}
+
+h3 {
+  font-family: 'Roboto Slab';
+  font-style: italic;
+  color: #ffffff;
+  text-shadow: 1px 1px #454545;
+  font-size: 1.75em;
+}
+
+h4 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bolder;
+  font-size: 1.25em;
+}
+
+a {
+  color: #ffffff;
+}
+
+a:hover {
+  color: #245640;
+}
+
+/******* NavBar ******/
+
+.navbar-default {
+  background-color: #107360;
+  height: 6em;
+  background-image: none;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+/*  background-color: transparent;*/
+/*  height: 6em;*/
+  padding-left: 0;
+ /* background-color: cyan;*/
+}
+
+.navbar a {
+  letter-spacing: 1px;
+  font-size: 1.5em;
+  font-family: 'Fjalla One';
+  text-shadow: 1px 1px #454545;
+}
+
+.navbar-right {
+  margin-right: 0px;
+}
+
+.navbar-brand {
+  margin-top: -0.85em;
+  padding-right: 0;
+ /* background-color: yellow;*/
+  width: 50%;
+  height: 5.25em;
+}
+
+.navbar-brand img {
+  width: 90%;
+  margin-top: 0.3em;
+}
+
+#total-navbar ul {
+  margin-left: -6em;
+  margin-top: 1.25em;
+}
+
+
+@media(max-width: 768px) {
+  .navbar-brand img {
+    width: 30%;
+    margin-top: 0.35em;
+  }
+
+  .navbar-brand {
+    margin-top: -1em;
+    height: 5em;
+  }
+}
+
+/******* Sections ******/
+header {
+  background-color: #e67e22;
+}
+
+.breadcrumb {
+  background-color: transparent;
+}
+
+.breadcrumb a {
+  color: #7F8C8D;
+  text-decoration: none;
+}
+
+.breadcrumb>.active {
+  color: #16A085;
+}
+
+.below-navbar {
+  margin-top: 6em;
+}
+
+.row-padding {
+  padding: 2em 0em 0em 0em;
+}
+
+#banner {
+  height: 400px;
+  width: 100%;
+  background-image: url(../images/Carousel_2nd.png);
+  background-repeat: center no-repeat;
+  margin: 0 auto;
+  position: relative;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+ /* border-bottom: 3px solid #16A085;*/
+}
+
+.banner-header-block {
+  margin: 0 auto;
+  width: 40%;
+  height: 15%;
+  padding: 2% 5% 2% 5%;
+  background-color: rgba(107, 107, 107, 0.9);
+  text-align: center;
+  margin-top: 8.5em;
+  border-radius: 2px;
+}
+
+.banner-header {
+  font-family: 'Fjalla One';
+  font-style: italic;
+  color: #ffffff;
+  text-shadow: 1px 1px #454545;
+}
+
+.center-block-text {
+  margin: 0 auto;
+  width: 75%;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 7em;
+}
+
+.center-block-text-half {
+  margin: 0 auto;
+  width: 75%;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 9em;
+}
+
+.table-header {
+  background-color: #e67e22;
+  border-radius: 5px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px #888888;
+}
+
+.star-color {
+  color: #80004b;
+}
+
+table a {
+  color: #2C3E50;
+}
+
+.table tr td:nth-child(1) {
+  width: 20%;
+}
+
+.table tr td:nth-child(2) {
+  width: 35%;
+}
+
+
+.header-link-table {
+  font-family: 'Roboto Slab', sans-serif;
+  font-style: normal;
+  margin-top: -1px;
+  font-size: 1.25em;
+}
+
+.new-header {
+  font-style: normal;
+  color: black;
+  padding: 0.5em 0em 2em 0em;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.pagination>li>a {
+  color: #e67e22;
+}
+
+.pagination>.active>a {
+  background-color: #e67e22;
+  border-color: #e67e22;
+}
+
+.box-style {
+  background-color: #ECF0F1;
+  border-radius: 5px;
+  padding: 2em 2em 1em 2em;
+}
+
+/******* Ride view ******/
+
+.searcher {
+  margin-top: 1em;
+}
+
+.searcher-text {
+  padding: .7em 0.25em 0em 0em;
+}
+
+.button-padding {
+  padding-top: 1.4em;
+}
+
+.photos {
+  margin-top: 2.5em;
+}
+
+/*#wrapper a:hover {
+  opacity: .8;
+}*/
+
+.photos-box img {
+  height: 9em;
+  width: 100%;
+}
+
+/******* Maps ******/
+#map-container {
+  height: 400px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+#map-textbox {
+  height: 400px;
+  width: 300px;
+  margin-left: 100px;
+  background-color: rgba(188, 188, 188, 0.9);
+  color: #fff;
+  position: absolute;
+  z-index: 2;
+}
+
+.map-headerbox {
+  padding: 0.5em;
+  background-color: #707070;
+  border-radius: 2px;
+  width: 90%;
+  margin-left: 5%;
+  letter-spacing: 1px;
+  text-shadow: 0px 2px 2px #4a4a4a;
+}
+
+.map-regulartext {
+  padding: 0.5em 0.5em 0.5em 1em;
+  background-color: #969696;
+  border-radius: 2px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.map-circles {
+  margin-top: 18%;
+  width: 100%;
+  margin-left: 8%;
+}
+
+.map-circle-single {
+  display: inline-block;
+  background-color: #c9c9c9;
+  border-radius: 100px;
+  width: 17%;
+  padding: 0.5em;
+  float: left;
+  text-align: center;
+  text-shadow: 0.25px 0.25px #454545;
+  margin: 0em 0.25em 0em 0.5em;
+}
+
+.bottom-border {
+  border-top: 3px solid #419e76;
+}
+
+.footer-text {
+  margin: 0 auto;
+  width: 75%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer-color-one {
+  background-color: #16a085;
+  height: 1em;
+  padding: 1em 0em;
+}
+
+.footer-color-two {
+  background-color: #107360;
+  height: 9em;
+  padding: 1.25em 0em 2.5em 0em;
+}
+
+.footer-color-three {
+  background-color: #382010;
+  height: 1.5em;
+  padding: 1em 0em 2em 0em;
+  color: #ffffff;
+}
+
+.footer-links-block {
+  padding: 1em 0em 0.5em 0em;
+}
+
+.footer-links a {
+  font-family: 'Roboto Slab';
+}
+
+.footer-links a:hover {
+  text-decoration: none;
+}
+
+.footer-links li {
+  list-style: none;
+}
+
+/******* Maps Page ******/
+.underscore-green {
+  border-bottom: 2px solid #E67E22;
+}
+
+.box-ride {
+  border: 3px solid #E67E22;
+  border-radius: 5px;
+}
+
+.special-number {
+  color: #000000;
+  font-style: normal;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.special-number-margin {
+  margin-bottom: 0em;
+  margin-top: 1.25em;
+}
+
+.buttons {
+  margin: 4em 0em;
+}
+
+.button {
+  background-color: #E67E22;
+  border-radius: 2px;
+  padding: 1em 3em;
+  width: 75%;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  box-shadow: 2px 2px #888888;
+}
+
+.button:hover {
+  background-color: #D35400;
+  text-decoration: none;
+}
+
+#carousel-box {
+  border-radius: 2px;
+}
+
+.infowindow-text {
+  font-size: 1.1em;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: justify;
+}
+
+/******* Modals ******/
+.bike-modal .modal-content {
+  padding: 100px 0;
+  min-height: 100%;
+  border: 0;
+  border-radius: 0;
+  text-align: center;
+  background-clip: border-box;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+}
+
+.bike-modal .close-modal {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 70px;
+  height: 70px;
+  background-color: #107360;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.bike-modal .close-modal:hover {
+    opacity: .3;
+}
+
+.bike-modal .close-modal .lr {
+  z-index: 1051;
+  width: 3px;
+  height: 50px;
+  margin-left: 34px;
+  margin-top: 10px;
+  background-color: #ffffff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.bike-modal .close-modal .lr .rl {
+  z-index: 1052;
+  width: 3px;
+  height: 50px;
+  background-color: #ffffff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.bike-modal .modal-backdrop {
+  display: none;
+  opacity: 0;
+}
+
+hr {
+  border-top: 1px solid #107360;
+}
+
+.caption {
+  position: absolute;
+  width: 90.5%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(16,115,96,.9);
+  border-radius: 10px;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  -ms-transform: all ease .5s;
+  transition: all ease .5s;
+}
+
+.caption:hover {
+  opacity: 1;
+}
+
+.caption .caption-content {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+
+/******* Helpers ******/
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.bottom {
+  padding-bottom: 0.5em;
+}
+
+.bottom-extra {
+  margin-bottom: 1em;
+}
+
+.bottom-plus {
+  padding-bottom: 1.25em;
+}
+
+.shadow {
+  text-shadow: 1px 1px #454545;
+  letter-spacing: 1px;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.blue-text {
+  color: #2980B9;
+}
+
+.regular-content-size {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.padding-box {
+  padding: 1em 0em;
+}
+
+.pre-small {
+  font-size: 0.9em;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.extra-padding-left {
+  padding-left: 1em; 
+}
