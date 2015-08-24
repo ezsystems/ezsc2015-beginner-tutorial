@@ -1,4 +1,0 @@
-services:
-#    ez_tutorial_bike.example:
-#        class: EzTutorial\BikeBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
