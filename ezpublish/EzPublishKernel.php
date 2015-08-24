@@ -37,7 +37,6 @@ class EzPublishKernel extends Kernel
             new eZ\Bundle\EzPublishCoreBundle\EzPublishCoreBundle(),
             new eZ\Bundle\EzPublishLegacySearchEngineBundle\EzPublishLegacySearchEngineBundle(),
             new eZ\Bundle\EzPublishIOBundle\EzPublishIOBundle(),
-            new EzSystems\DemoBundle\EzSystemsDemoBundle(),
             new eZ\Bundle\EzPublishRestBundle\EzPublishRestBundle(),
             new EzSystems\CommentsBundle\EzSystemsCommentsBundle(),
             new EzSystems\PlatformUIAssetsBundle\EzSystemsPlatformUIAssetsBundle(),
