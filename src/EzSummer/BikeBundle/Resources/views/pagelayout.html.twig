@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    {% block meta %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="eZ Systems - Beginner tutorial" content="eZ Systems where content meets business">
+    <meta name="Bike Tutorial" content="eZ Systems tutorial">
+
+    <title>Beginners Tutorial - Bike Rides new</title>
+    {% endblock %}
+    <!-- <link rel="icon" type="image" href="{{ asset( "bundles/ezsummerbike/images/favicon.ico" ) }}"> -->
+
+    {% block css %}
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ asset( "bundles/ezsummerbike/css/bootstrap.min.css" ) }}" rel="stylesheet">
+    <link href="{{ asset( "bundles/ezsummerbike/css/bootstrap-theme.css" ) }}" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link href="{{ asset( "bundles/ezsummerbike/css/style.css" ) }}" rel="stylesheet">
+    <link href="{{ asset( "bundles/ezsummerbike/css/normalize.css" ) }}" rel='stylesheet'>
+
+    <!-- Custom Fonts & Themes -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    {% endblock %}
+</head>
+
+<body>
+    {% block navbar %}
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" id="total-navbar">
+        <div class="container">
+            <!-- Brand and toggle -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#go-bike-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img alt="Brand" src="{{ asset( "bundles/ezsummerbike/images/128_bike_white_avenir.png" ) }}">
+                </a>
+            </div>
+
+            <!-- nav links -->
+            <div id="go-bike-navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">ALL RIDES</a></li>
+                    <!--  <li><a href="#">SUBMIT A RIDE</a></li>
+                     <li><a href="#">MY ACCOUNT</a></li> -->
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">EN</a></li>
+                    <li><a href="#">FR</a></li>
+                    <li><a href="#">NO</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div><!-- /.container -->
+    </nav>
+    {% endblock %}
+
+    {% block header %}{% endblock %}
+
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-color-one">
+            <div class="container">
+                <div class="col-xs-10 col-xs-offset-1 text-center" id="intouch">
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-color-two">
+            <div class="container">
+                <div class="row regular-content-size">
+                    <div class="col-xs-8 col-xs-offset-2 footer-links-block">
+                        <ul class="list-inline footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="map.html">All Rides</a></li>
+                            <li><a href="find.html">Submit a Ride</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-8 col-xs-offset-2 footer-links-block">
+                        <ul class="list-inline footer-links">
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Language</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-color-three">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p class="small">Website design &#38; content © copyright 2015 eZ Systems. This website was made with eZ Platform</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+
+    {% block footer_js %}
+    <!-- jQuery -->
+    <script src="{{ asset( "bundles/ezsummerbike/js/jquery.min.js" ) }}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ asset( "bundles/ezsummerbike/js/bootstrap.min.js" ) }}"></script>
+    {% endblock %}
+
+</body>
+</html>

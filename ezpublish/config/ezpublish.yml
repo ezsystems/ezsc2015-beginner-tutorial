@@ -50,3 +50,10 @@ ezpublish:
                 # TTL cache (http) in seconds
                 # Note that Http cache for a given content is always invalidated when publishing that content
                 default_ttl: 300
+
+            location_view:
+                full:
+                    home:
+                        template: "EzSummerBikeBundle:full:home.html.twig"
+                        match:
+                            Id\Location: 2

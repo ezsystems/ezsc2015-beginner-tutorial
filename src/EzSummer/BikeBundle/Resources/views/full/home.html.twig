@@ -1,0 +1,262 @@
+{% extends "EzSummerBikeBundle::pagelayout.html.twig" %}
+
+{% block header %}
+    <!-- Header -->
+    <header class="below-navbar">
+        <div class="container">
+            <div class="row" id="banner">
+                <div class="col-xs-12">
+                    <div class="banner-header-block">
+                        <img src="{{ asset( "bundles/ezsummerbike/images/logo_just_letters.png" ) }}" style="width: 100%;">
+                        <h3 class="banner-header">Discover new rides! Go Bike!</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+
+{% block content %}
+    <section class="buttons">
+        <div class="container">
+            <div class="row regular-content-size">
+                <div class="col-xs-6 col-xs-offset-3">
+                    <h4 class="center bottom">Find a Ride:</h4>
+                    <div class="input-group custom-search-form">
+                        <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="buttons">
+        <div class="container">
+            <div class="row regular-content-size">
+                <div class="col-xs-10 col-xs-offset-1 box-style">
+                    <h3 class="center bottom-plus new-header">List of all Rides</h3>
+                    <table class="table table-hover">
+                        <thead>
+                        <tr class="table-header">
+                            <th>Ride</th>
+                            <th></th>
+                            <th>From - To</th>
+                            <th>Distance</th>
+                            <th>Level</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <img src="{{ asset( "bundles/ezsummerbike/images/toulousse.png" ) }}" style="width: 100%;">
+                            </td>
+                            <td>
+                                <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">My first ride</a></strong></h3>
+                                <p class="pre-small">Inaki Juaniz-Velilla</p>
+                            </td>
+                            <td>
+                                <p>Lyon</p>
+                                <p>Toulouse</p>
+                            </td>
+                            <td>
+                                <p>30 Km</p>
+                            </td>
+                            <td>
+                                <p>Super easy!</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="{{ asset( "bundles/ezsummerbike/images/geneva.png" ) }}" style="width: 100%;">
+                            </td>
+                            <td>
+                                <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Geneva, My Favorite Ride</a></strong></h3>
+                                <p class="pre-small">Sarah Haim-Lubczanski</p>
+                            </td>
+                            <td>
+                                <p>Lyon</p>
+                                <p>Geneva</p>
+                            </td>
+                            <td>
+                                <p>100 Km</p>
+                            </td>
+                            <td>
+                                <p>Amateur</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="{{ asset( "bundles/ezsummerbike/images/hauteville.png" ) }}" style="width: 100%;">
+                            </td>
+                            <td>
+                                <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Evian</a></strong></h3>
+                                <p class="pre-small">Sarah Haim-Lubczanski</p>
+                            </td>
+                            <td>
+                                <p>Lyon</p>
+                                <p>Evian</p>
+                            </td>
+                            <td>
+                                <p>150 Km</p>
+                            </td>
+                            <td>
+                                <p>Pro</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="{{ asset( "bundles/ezsummerbike/images/lyon.png" ) }}" style="width: 100%;">
+                            </td>
+                            <td>
+                                <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Chamonix, Beautiful Ride!</a></strong></h3>
+                                <p class="pre-small">Sarah Haim-Lubczanski</p>
+                            </td>
+                            <td>
+                                <p>Lyon</p>
+                                <p>Chamonix</p>
+                            </td>
+                            <td>
+                                <p>223 Km</p>
+                            </td>
+                            <td>
+                                <p>Pro</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="{{ asset( "bundles/ezsummerbike/images/3.jpg" ) }}" style="width: 100%;">
+                            </td>
+                            <td>
+                                <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Chambery ride</a></strong></h3>
+                                <p class="pre-small">Jince Kuruvilla</p>
+                            </td>
+                            <td>
+                                <p>Lyon</p>
+                                <p>Chambery</p>
+                            </td>
+                            <td>
+                                <p>109 Km</p>
+                            </td>
+                            <td>
+                                <p>Amateur</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="{{ asset( "bundles/ezsummerbike/images/hauteville.png" ) }}" style="width: 100%;">
+                            </td>
+                            <td>
+                                <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Clemont-Ferrand; hard, but nice ;)</a></strong></h3>
+                                <p class="pre-small">Roland Benedetti</p>
+                            </td>
+                            <td>
+                                <p>Lyon</p>
+                                <p>Clemont-Ferrand</p>
+                            </td>
+                            <td>
+                                <p>165 Km</p>
+                            </td>
+                            <td>
+                                <p>Pro</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="{{ asset( "bundles/ezsummerbike/images/3.jpg" ) }}" style="width: 100%;">
+                            </td>
+                            <td>
+                                <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Saint-Paul-de-Varax, Not Bad!</a></strong></h3>
+                                <p class="pre-small">Sarah Haim-Lubczanski</p>
+                            </td>
+                            <td>
+                                <p>Lyon</p>
+                                <p>Saint-Paul-de-Varax</p>
+                            </td>
+                            <td>
+                                <p>52 Km</p>
+                            </td>
+                            <td>
+                                <p>No training needed!</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="{{ asset( "bundles/ezsummerbike/images/montalieu.png" ) }}" style="width: 100%;">
+                            </td>
+                            <td>
+                                <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Montbrison ride</a></strong></h3>
+                                <p class="pre-small">Jince Kuruvilla</p>
+                            </td>
+                            <td>
+                                <p>Lyon</p>
+                                <p>Montbrison</p>
+                            </td>
+                            <td>
+                                <p>102 Km</p>
+                            </td>
+                            <td>
+                                <p>Amateur</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="{{ asset( "bundles/ezsummerbike/images/toulousse.png" ) }}" style="width: 100%;">
+                            </td>
+                            <td>
+                                <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Valence; like it, but too much traffic</a></strong></h3>
+                                <p class="pre-small">Roland Benedetti</p>
+                            </td>
+                            <td>
+                                <p>Lyon</p>
+                                <p>Valence</p>
+                            </td>
+                            <td>
+                                <p>103 Km</p>
+                            </td>
+                            <td>
+                                <p>Amateur</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="{{ asset( "bundles/ezsummerbike/images/geneva.png" ) }}" style="width: 100%;">
+                            </td>
+                            <td>
+                                <h3 class="header-link-table"><strong><a href="ride_view.html" target="_self">Vienne, short and nice</a></strong></h3>
+                                <p class="pre-small">Roger Erra</p>
+                            </td>
+                            <td>
+                                <p>Lyon</p>
+                                <p>Vienne</p>
+                            </td>
+                            <td>
+                                <p>40 Km</p>
+                            </td>
+                            <td>
+                                <p>No training needed!</p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <nav class="text-center">
+                        <ul class="pagination">
+                            <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
