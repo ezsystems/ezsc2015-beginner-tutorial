@@ -54,6 +54,7 @@ ezpublish:
             location_view:
                 full:
                     home:
+                        controller: "EzSummerBikeBundle:Ride:list"
                         template: "EzSummerBikeBundle:full:home.html.twig"
                         match:
                             Id\Location: 2
