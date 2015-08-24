@@ -13,5 +13,5 @@ parameters:
     database_host: localhost
     database_port: ~
     database_name: ezplatform
-    database_user: root
-    database_password:
+    database_user: summer
+    database_password: camp
