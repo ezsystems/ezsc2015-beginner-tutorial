@@ -57,3 +57,8 @@ ezpublish:
                         template: "EzSummerBikeBundle:full:home.html.twig"
                         match:
                             Id\Location: 2
+
+                    ride:
+                        template: "EzSummerBikeBundle:full:ride.html.twig"
+                        match:
+                            Identifier\ContentType: ride
